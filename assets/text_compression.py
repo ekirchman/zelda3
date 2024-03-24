@@ -469,7 +469,7 @@ def print_strings(rom, file = None):
 
 def encode_greedy_from_dict(s, i, rev, a2i, info):
   a = s[i:]
-  r = a2i.get(a[:cmdlen+2])
+  r = rev.get(a[0])
   if r:
     for k, v in r.items():
       if a.startswith(k):
